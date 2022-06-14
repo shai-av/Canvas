@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.toolBar {
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    background-color: #d5d5d5;
+    left: 0;
+    transition: 0.5s;
+    display: flex;
+    text-align: center;
+    padding: 1em 2em;
+    border-radius: 2em;
+    border: 1px solid black;
+}
+
+body.drawing .toolBar {
+    top: -7em;
+}
+
+.toolBar *{
+    height: 3em;
+    width: 7em;
+    border-radius: 0.5em;
+    margin-right: 0.8em;
+    font-size: 20px;
+}
+
+.toolBar button {
+    font-weight: 700;
+    color: #d5d5d5;
+}
+
+.toolBar .download-btn {
+    background-color: #FF9800;
+}
+
+.toolBar .download-btn a {
+    text-decoration: none;
+    color: #d5d5d5;
+}
+
+.toolBar .clear-btn {
+    background-color: #F44336;
+}
+
+.toolBar .upload-btn {
+    background-color: #3F51B5;
+}
+
+.upload-input-container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: #F44336;
+}
+
+.toolBar input.file-input {
+    width: fit-content;
+    height: fit-content;
+    color: #d5d5d5;
+    font-size: 1.5em;
+    padding-left: 0.5em;
+}

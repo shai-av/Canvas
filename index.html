@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mister canvas project</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="init()">
+    <div class="toolBar">
+        <select name="line-width" title="line" onchange="onChangeLineWidth(this.value)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+        </select>
+        <select name="shape-size" title="size" onchange="onChangeShapeSize(this.value)">
+            <option value="50">50</option>
+            <option value="75">75</option>
+            <option value="100" selected>100</option>
+            <option value="150">150</option>
+            <option value="300">300</option>
+        </select>
+        <input type="color" name="stroke-color" title="stroke" onchange="onChangeStrokeClr(this.value)">
+        <input type="color" name="fill-color" title="fill" onchange="onChangeFillClr(this.value)">
+        <select name="curr-shape" onchange="onChangeShape(this.value)">
+            <option value="line">LINE</option>
+            <option value="square">SQUARE</option>
+            <option value="triangle">TRIANGLE</option>
+            <option value="circle">CIRCLE</option>
+        </select>
+        <button class="download-btn"><a href="#" onclick="onDownloadCanvas(this)" download="">Download</a></button>
+        <button class="clear-btn" onclick="onClearCanvas()">Clear</button>
+        <button class="upload-btn" onclick="onUpload()">Upload</button>
+        <div class="upload-input-container"><input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" /></div>
+    </div>
+    <div class="canvas-container">
+        <canvas id="my-canvas"></canvas>
+    </div>
+
+
+
+
+    <script src="js/canvas-controller.js"></script>
+</body>
+
+</html>
